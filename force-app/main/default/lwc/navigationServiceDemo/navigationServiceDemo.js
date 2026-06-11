@@ -14,6 +14,8 @@ export default class NavigationServiceDemo extends NavigationMixin(LightningElem
             }
         })
     }
+    // Important message
+    
     navigateToChatter(){
         this[NavigationMixin.Navigate]({
             type: 'standard__namedPage',
