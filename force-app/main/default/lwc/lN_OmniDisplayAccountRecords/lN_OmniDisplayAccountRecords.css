@@ -1,0 +1,8 @@
+.cellGreyedOut {
+    color : #6b6d70 !important;
+    background-color : #DEDEDE !important;
+    overflow-wrap : break-word;
+    white-space : pre-Line;
+    pointer-events : none;
+
+}

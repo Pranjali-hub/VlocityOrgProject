@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Case Dashboard" icon-name="standard:case">
+        <div class="slds-p-horizontal_medium">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox
+                        name="status"
+                        label="Status"
+                        value={statusValue}
+                        placeholder="Select Status"
+                        options={statusOptions}
+                        onchange={handleChange}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox
+                        name="Owner"
+                        label="Owner"
+                        value={ownerValue}
+                        placeholder="Select Owner"
+                        options={ownerOptions}
+                        onchange={handleChange}>
+                    </lightning-combobox>
+                </div>
+            </div>
+        </div>
+        <template if:false={isDataEmpty}>
+            <lightning-datatable
+            key-field="Id"
+            data={caseData}
+            columns={columns}
+            hide-checkbox-column>
+        </lightning-datatable>       
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-input type="search" label="Search" onchange={handleSearch}></lightning-input>
+    <lightning-datatable
+        data={data}
+        columns={columns}
+        selected-rows={selectedRows}
+        key-field="Id"    
+        onsave ={handleSave}
+        draft-values={draftValues}
+        onrowselection={handleRowSelection}>
+
+    </lightning-datatable>
+</template>

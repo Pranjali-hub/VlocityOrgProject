@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Record Form Create" icon-name="custom:account">
+        <div class="slds-p-horizontal_medium">
+            <lightning-record-form object-api-name={objectApiName}
+             fields={fields}
+             onsuccess={handleSuccess}
+             onerror={handleError}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Record Form View" icon-name="custom:account">
+        <div class="slds-p-horizontal_medium">
+            <lightning-record-form object-api-name={objectApiName}
+             fields={fields}
+             record-id="001Ie000009aHKQIA2"
+             onsuccess={handleSuccess}
+             onerror={handleError}
+             mode="readonly"
+             >
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

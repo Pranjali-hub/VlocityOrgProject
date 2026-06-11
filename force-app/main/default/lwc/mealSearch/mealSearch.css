@@ -1,0 +1,23 @@
+.mealheader{
+    background-image :url('/resource/MealImage');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height : 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.mealContainer{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius:8px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    color: black;
+
+}

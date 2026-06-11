@@ -1,0 +1,14 @@
+<template>
+    <lightning-layout horizontal-align="left" vertical-align="top" size="4">
+        <lightning-card title="Integration Demo" icon-name="standard:lead">
+            <lightning-layout-item size="4">
+                <lightning-input label="Enter Lead Name" value={leadName} onchange={handleLeadChange}></lightning-input>
+                <lightning-button label="Get Lead" onclick={getLeadInformation}></lightning-button>
+                <lightning-datatable data={leadData} key-field="Id" columns={columns}>
+                </lightning-datatable>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+            </lightning-layout-item>
+        </lightning-card>
+    </lightning-layout>
+</template>

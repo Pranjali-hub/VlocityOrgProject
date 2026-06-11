@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Apex Imperative Demo">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Get Accounts" onclick={handleGetAccounts}></lightning-button>
+        </div>
+    
+    <template if:true={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div key={account.Id} class="slds-m-vertical_small">
+                        <p><strong>Account Name:</strong> {account.Name}</p>
+                        <p><strong>Account Phone:</strong> {account.Phone}</p>
+                        <p><strong>Account Industry:</strong> {account.Industry}</p>
+                        <p><strong>Account Type:</strong> {account.Type}</p>
+                    </div>
+                </template>
+    </template>
+    </lightning-card>
+</template>

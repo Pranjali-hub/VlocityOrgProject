@@ -1,0 +1,24 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="6" class="slds-p-bottom_medium">
+            <lightning-input type="text" label="Search Accounts" value={searchKey} onchange={handleSearch}>
+            </lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <div class ="fixed-datatable">
+        <c-l-w-c-custom-datatable-type
+            data={data}
+            columns={columns}
+            key-field="AccountId"
+            onrowselection={handleRowSelection}
+            selected-rows={selectedRows}
+            onpicklistchanged={multipicklistChanged}
+            onsave={handleSave}
+            draft-values={draftValues}
+            oncellchange={handleCellChange}
+            wrap-table-header = "by-column">
+        </c-l-w-c-custom-datatable-type>        
+    </div>
+    
+</template>
